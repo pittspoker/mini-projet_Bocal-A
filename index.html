@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!--Balise viewport necessaire pour intégrer les mediaqueries-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Police Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <!--Lien vers le fichier css qui se trouve dans un dossier css-->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!--Clé fontawsome-->
+    <script src="https://kit.fontawesome.com/354e258e99.js" crossorigin="anonymous"></script>
+    <!--Balise Title et meta description utiles pour le référencement-->
+    <title>The R'guitar shop</title>
+    <meta name="description" content="Description de la page">
+</head>
+<body>
+    <!--Menu de navigation-->
+    <header>
+        <img src="images/Logo1.png" alt="Logo du site ...">
+        <nav>
+            <ul>
+                <li><a href="#presentation">L'esprit R'Guitar</a></li> <!-- #presentation et #boutique = Liens ancres-->
+                <li><a href="#boutique">Nos grattes</a></li>
+                <li><a href="#" class="shop"><i class="fa-solid fa-cart-shopping"></i> Boutique</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="background">
+        <!--<img src="images/bakground.jpg" alt="">--> <!--L'image est intégrée dans le CSS-->
+        <div class="container-title">
+            <h1>Votre meilleur riff mérite <br>
+                <span></span>la meilleure guitare</h1> <!--Ici, les balises span vont servir à la création du trait L.106 du fichier css-->
+        </div>  
+    </div>
+
+    <!--Première section L'esprit R'guitar-->
+    <section id="presentation">
+        <h2>L'esprit R'Guitar</h2>
+        <div class="bloc_rguitar">
+            <div class="bloc_text">
+                <article>
+                    <div class="bloc_title">
+                        <h3>Seule compte la musique</h3><span class="span_before"></span> <!--Ici, les balises span vont servir à la création du trait L.175 du fichier css-->
+                    </div>
+                    <p>Horum adventum praedocti speculationibus fidis rectores militum tessera data sollemni armatos omnes celeri eduxere procursu et agiliter praeterito Calycadni fluminis ponte, cuius undarum magnitudo murorum adluit turres, in speciem locavere pugnandi. neque tamen exiluit quisquam nec permissus est congredi. formidabatur enim flagrans vesania manus et superior numero et ruitura sine respectu salutis in ferrum. olim subversa ut rebellatrix interneciva aegre vestigia claritudinis pristinae monstrat admodum pauca.</p>
+                </article>
+                <article>
+                    <div class="bloc_title">
+                        <span class="span_after"></span><h3>Seule compte la musique</h3> <!--Ici, les balises span vont servir à la création du trait-->
+                    </div>
+                    <p>Horum adventum praedocti speculationibus fidis rectores militum tessera data sollemni armatos omnes celeri eduxere procursu et agiliter praeterito Calycadni fluminis ponte, cuius undarum magnitudo murorum adluit turres, in speciem locavere pugnandi. neque tamen exiluit quisquam nec permissus est congredi. formidabatur enim flagrans vesania manus et superior numero et ruitura sine respectu salutis in ferrum. olim subversa ut rebellatrix interneciva aegre vestigia claritudinis pristinae monstrat admodum pauca.</p>
+                </article>
+                <img src="images/image4-4.webp" alt="description">
+                <article>
+                    <div class="bloc_title">
+                        <h3>Seule compte la musique</h3><span class="span_before"></span> <!--Ici, les balises span vont servir à la création du trait-->
+                    </div>
+                    <p>Horum adventum praedocti speculationibus fidis rectores militum tessera data sollemni armatos omnes celeri eduxere procursu et agiliter praeterito Calycadni fluminis ponte, cuius undarum magnitudo murorum adluit turres, in speciem locavere pugnandi. neque tamen exiluit quisquam nec permissus est congredi. formidabatur enim flagrans vesania manus et superior numero et ruitura sine respectu salutis in ferrum.</p>
+                </article>
+            </div>
+            <div class="bloc_image">
+                <img src="images/image1-1.webp" alt="Description image 1">
+                <img src="images/image3-3.webp" alt="description">
+                <img src="images/image2-2.webp" alt="description">
+            </div>
+        </div>
+    </section>
+
+    <!--Deuxième section Boutique-->
+    <section id="boutique">
+        <h2>Nos grattes</h2>
+        <div class="bloc_section_boutique">
+            <h3>Les guitares en stocks<span></span></h3> <!--Ici, les balises span vont servir à la création du trait L.246 fichier css-->
+            <p>Coactique aliquotiens nostri clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint summos, inter arta tamen et invia nullas acies explicare permissi nec firmare nisu valido gressus:</p>
+        </div>
+        <div class="bloc_guitar">
+                <figure> <!--La balise figure est une balise sémantique dans laquelle on peut placer une image ou une illustration-->
+                    <img src="images/Gibson.webp" alt="">
+                    <h4 class="title_guitar">Gibson Casino</h4>
+                    <figcaption> <!--Figcaption est une balise facultative complémentaire à <figure> qui permet de mettre la légende d'une image-->
+                        <div class="legend_text">
+                            <p>2000,00€</p>
+                            <button>Acheter</button>
+                        </div>
+                    </figcaption>
+                </figure>
+            
+                <figure> <!-- Ici, les balises <figure> peuvent être remplacées par une balise <article> ou une simple <div>. A noter que dans ce cas, la balise figcaption devra elle aussi être remplacée par une div.-->
+                    <img src="images/lespaul.webp" alt="">
+                    <h4>Les paul Plus <br> Trans Blue</h4>
+                    <figcaption>
+                        <div class="legend_text">
+                            <p><span>500,00€</span> 400,00€</p>
+                            <button>Acheter</button>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/fender.webp" alt="">
+                    <h4>Fender <br> Stratocaster</h4>
+                    <figcaption>
+                        <div class="legend_text">
+                            <p>3000,00€</p>
+                            <button>Acheter</button>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/bcrich.webp" alt="">
+                    <h4>BC Rich <br> Double neck</h4>
+                    <figcaption>
+                        <div class="legend_text">
+                            <p>2500,00€</p>
+                            <button>Acheter</button>
+                        </div>
+                    </figcaption>
+                </figure>
+        </div>
+    </section>
+
+    <!--Dernière section Formulaire de contact-->
+    <section id="form_container">
+        <h2>Contactez-nous</h2>
+        <div class="bloc_section_form">
+            <h3><span></span>Laisse nous un mot</h3><!--Ici, les balises span vont servir à la création du trait-->
+        </div>
+
+        <form action="/traitement">
+
+            <div class="bloc_name">
+                <label for="name">Nom et Prénom</label>
+                <input type="text" name="name" id="name" placeholder="Paul McCartney">
+            </div>
+
+            <div class="bloc_email_phone">
+                <div class="bloc_mail">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Paul@mccartney.uk">
+                </div>
+                <div class="bloc_phone">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="0102030405">
+                </div>
+            </div>
+
+            <div class="bloc_textarea">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" 
+                placeholder="Et est admodum mirum videre plebem.
+innumeram mentibus ardore quodam infuso cum dimicationum,
+curulium eventu pendentem. haec similiaque memorabile nihil,
+vel serium agi Romae permittunt. 
+ergo redeundum ad textum."></textarea>
+            </div>
+
+            <div class="bloc_button">
+                <button>Valider</button>
+            </div>
+            
+        </form>
+
+    </section>
+    <footer>
+        <div class="infos_footer">
+            <h4>Bocal Academy</h4>
+            <p>Projet html et css</p>
+        </div>
+    </footer>
+</body>
+</html>

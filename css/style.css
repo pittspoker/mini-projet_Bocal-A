@@ -1,0 +1,570 @@
+/* Paramétrages généraux */
+*, ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    list-style: none;
+    /**/
+    scroll-behavior: smooth; /* Au clic des liens du menu, le scrolling réagit lentement */
+    /**/
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none; 
+}
+
+p {
+    font-size: 15px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+h1, h2, h3, h4, p, a, label, input, textarea {
+    color: #444444;
+}
+
+h3 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1em;
+}
+
+h4 {
+    text-transform: uppercase;
+}
+
+.infos_footer h4{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #fff; 
+    font-size: 15px;
+    font-weight: 400;
+}
+
+footer p {
+    letter-spacing: 5px;
+    color: #fff; 
+}
+
+/*////////*/
+/* HEADER */
+/*////////*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 10px solid #B14949;
+    background-color: #E0E0E0;
+}
+
+/* Redimensionnement du logo */ 
+header img {
+    width: 250px;
+}
+
+/* Alignement des élément li avec la propriété display flex sur son élément parent */
+nav ul {
+    display: flex;
+    /*gap: 30px;*/
+}
+
+/* On donne une largeur à l'élément li et on le centre */
+nav li {
+    width: 180px;
+    text-align: center;
+    letter-spacing : 5px; /* Gestion de l'espace blanc entre les caractères */
+    font-size: 13px;
+}
+
+/* class de l'élément li */
+.shop {
+    border: 1px solid #B14949;
+    padding: 8px;
+    border-radius: 10px;
+}
+/**/
+
+#background {
+    position: relative;
+    background: url("../images/bakground_img.webp") no-repeat; /* Intégration de l'image en arrière-plan*/
+    background-size: cover; /* L'image prends tout l'espace */
+    width: 100%;
+    height: 100vh; /* Le background prend toute la hauteur de l'écran */
+    /**/
+    margin-top: -80px; /* On remonte le background au niveau du header Afin que l'image prenne l'espace de l'écran*/
+    z-index: -1; /* On positionne le background en dessous du header */
+    /**/
+}
+
+/* Bloc parent du h1 */
+.container-title {
+    /*width: 70%;*/
+    height: 300px;
+    padding-right: 35px;
+    /*Flexbox*/
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    /**/
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #fff;
+}
+
+/* Création du trait du h1 */
+/* Pseudos éléments before et after 
+https://www.codeur.com/tuto/css/pseudo-elements-after-before-css/*/
+#background span:before {
+    content: "";
+    display: inline-block;
+    width: 350px;
+    height: 8px;
+    background-color: #fff;
+    margin-bottom: 3px;
+    margin-right: 10px;
+}
+/**/
+
+/*//////////////////*/
+/* R'GUITAR SECTION */
+/*//////////////////*/
+
+/* Image rajoutée pour le format mobile qui n'apparait pas en version desktop
+en utilisant la prpriété display none */
+.bloc_text img {
+    display: none;
+}
+/**/
+
+article p {
+    text-align: justify; /* Le texte du texte sur les 2 marges */
+}
+
+/* Alignement des textes et des images avec les propriétés flexbox */
+.bloc_rguitar {
+    display: flex;
+    justify-content: space-around;
+}
+/**/
+
+/* Largeur du bloc texte définit en % pour une meilleure gestion du responsive */
+.bloc_text {
+    width: 52%;
+}
+/**/
+
+article {
+    padding: 30px; /* Marges internes pour le texte */
+}
+
+section h2 {
+    text-transform: uppercase; /* Titre en majuscule */
+    letter-spacing: 5px;
+    color: #fff;
+    padding: 30px;
+    margin-top: 10px;
+    background-color: #B14949;
+}
+
+/* Alignement du h3 avec le trait */
+.bloc_title {
+    display: flex;
+    align-items: center;
+}
+
+.bloc_title h3{
+    width: 50%;
+}
+
+.bloc_text article .span_before, .bloc_text article .span_after{
+    width: 50%;
+}
+
+/* Création des traits à coté des h3*/
+.bloc_text article .span_before:before {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color:#B14949;
+}
+
+.bloc_text article .span_after:before {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color:#B14949;
+}
+/**/
+
+/* La pseudo-classe CSS :nth-child() permet de cibler tous l
+es n-ième enfants dans la liste des enfants directs d'un 
+même élément parent, afin de leur assigner des propriétés CSS.*/
+.bloc_title h3:nth-child(2) {
+    text-align: end;
+}
+/**/
+
+.bloc_image {
+    display: flex;
+    flex-wrap: wrap; /* La propriété flex-wrap indique si les éléments flexibles sont contraints à être disposés sur une seule ligne ou s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique.*/
+    padding: 30px;
+    width: 40%;
+}
+
+.bloc_image img{
+    padding: 10px;
+    object-fit: cover;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+.bloc_image img:nth-child(1){
+    width: 60%;
+}
+.bloc_image img:nth-child(2){
+    width: 40%;
+}
+.bloc_image img:nth-child(3){
+    width: 100%;
+}
+/**/
+
+/*//////////////////*/
+/* SECTION BOUTIQUE */
+/*//////////////////*/
+
+.bloc_section_boutique {
+    width: 40%;
+    margin: auto;
+    margin-top: 45px;
+}
+
+.bloc_section_boutique p{
+    margin: auto;
+}
+
+#boutique h2{
+    text-align: end;
+}
+
+#boutique h3{
+    text-align: center;
+}
+
+.bloc_section_boutique span:before { /* Création du trait */
+    content: "";
+    display: inline-block;
+    width: 250px;
+    height: 8px;
+    background-color: #B14949;
+    margin-bottom: 1px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.bloc_guitar {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 45px;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: normal;/* permet d'égaliser la hauteur des cards */
+}
+
+figure h4 {
+    margin-top: auto; /* Permet d'aligner les nom de guitares*/
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption {
+    margin-top: auto; /* Permet de mettre sur la même ligne le bloc du prix et du bouton */
+}
+
+figcaption, figcaption p {
+    text-align: center;
+}
+
+.legend_text p{
+    margin: 0;   
+}
+
+.legend_text button{
+    padding: 10px;
+    width: 100px;
+    background-color: #B14949;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;   
+}
+
+.legend_text p span {
+    text-decoration: line-through;
+}
+/**/
+
+/*/////////////////////////////////*/
+/*///////SECTION FORMULAIRE////////*/
+/*/////////////////////////////////*/
+
+.bloc_section_form span:before {
+    content: "";
+    display: inline-block;
+    width: 250px;
+    height: 8px;
+    background-color: #B14949;
+    margin-bottom: 1px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.bloc_section_form {
+    text-align: center;
+    margin-top: 55px;
+}
+
+form {
+    width: 70%;
+    margin: auto;
+    margin-top: 85px;
+    margin-bottom: 75px;
+}
+
+.bloc_name, .bloc_mail, .bloc_phone, .bloc_textarea {
+    padding: 10px;
+}
+
+.bloc_email_phone {
+    display: flex;
+}
+
+label {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+input {
+    border: 1px solid #B14949;
+    border-radius: 5px;
+    height: 30px;
+}
+
+textarea {
+    border: 1px solid #B14949;
+    border-radius: 5px;
+    width: 100%;
+    height: 300px;
+}
+
+input, textarea {
+    padding: 10px;
+    line-height: 30px;
+}
+
+textarea::placeholder, input::placeholder {
+    color: #c0bdbd;
+}
+
+.bloc_name {
+    width: 50%;
+}
+
+.bloc_name input {
+    width: 100%;
+}
+
+.bloc_phone, .bloc_mail {
+    width: 100%;
+}
+
+.bloc_phone input, .bloc_mail input{
+    width: 100%;
+}
+
+.bloc_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #B14949;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    padding: 9px 0 9px 0;
+}
+
+/*//////////////////////////*/
+/*//////////FOOTER//////////*/
+/*//////////////////////////*/
+
+footer {
+    background-color: #011B22;
+}
+
+.infos_footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+    margin: auto;
+}
+
+/*//////////////////////////*/
+/*/////// RESPONSIVE ///////*/
+/*//////////////////////////*/
+
+@media screen and (max-width :1150px) {
+
+    /*Background*/
+    #background span:before {
+        display: none; /* Le trait du titre est supprimé */
+    }
+
+    .container-title {
+        width: inherit;
+        height: auto;
+        padding-right: 0;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media screen and (max-width :992px) {
+    /*Nav*/
+    header {
+        flex-direction: column; /* Le logo et les liens sont placés en colonne */
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column; /* Les liens sont placés en colonne */
+        line-height: 45px;
+    }
+
+    nav li{
+        width: 100%;
+    }
+
+    /*rguitar section*/
+    .bloc_rguitar {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column-reverse; /* La propriété column-reverse permet de placer les éléments en colonne et d'inverser l'ordre d'apparition. Ici les images apparaitront avant le texte. */
+    }
+
+    .bloc_text {
+        width: 100%;
+    }
+
+    .bloc_image {
+        width: 100%;
+    }
+
+    .bloc_text img {
+        display: block;
+        height: 300px;
+        margin: auto;
+        border: 5px solid #B14949;
+        transform: rotate(-10deg);
+        margin-bottom: 35px;
+    }
+    /**/
+
+    /*Boutique section*/
+    .bloc_guitar {
+        display: flex;
+        width: 100%;
+        margin: auto;
+        margin-top: 45px;
+        flex-direction: column;
+    }
+    
+    figure img {
+        width: 20%;
+        display: flex;
+        margin:auto;
+    }
+
+    .bloc_section_boutique span:before {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 8px;
+        background-color: #B14949;
+        margin-bottom: 1px;
+        text-align: center;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width :768px){
+
+    h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    /*Image tablette/mobile*/
+    .bloc_text img {
+        height: inherit;
+        width: 50%;
+        transform: rotate(-10deg);
+        margin-bottom: 25px;
+    }
+
+    /*Form*/
+    form {
+        width: 100%;
+    }
+
+    .bloc_section_boutique {
+        width: 80%;
+    }
+
+    /*Footer*/
+    .infos_footer {
+        flex-direction: column;
+        
+    }
+    .infos_footer h4{
+        margin-bottom: 0;
+    }
+    .infos_footer p {
+        margin-top: 0;
+    }
+}
+
